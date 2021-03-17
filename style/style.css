@@ -1,21 +1,26 @@
-::root {
-	--skyblue: hsl(185, 75%, 39%);
-	--bg-dark: hsl(229, 23%, 23%);
-	--dark-gray:hsl(227, 10%, 46%);
-	--footer: hsl(228, 45%, 44%);
-	--gray: #aaa;
+:root {
+	--bg-skyblue: #19a1ad;
+	--balck-soft: #3a3c4e;
+	--gray: #ababab;
+	--gray-light: #ccc;
 }
+/* :root {
+  --blue: #1e90ff;
+  --white: #ffffff;
+}
+color: var(--blue);
+*/
 
 .u-h, .u-light {
 	text-align: center;
 }
 
 body {
-	background-color: #19a1ad;
+	background-color: var(--bg-skyblue);
 	background-image: url(../images/bg-pattern-top.svg), url(../images/bg-pattern-bottom.svg);
-	background-position: top -450px left -320px, bottom -1350px right -150px;
+	background-position: top -15vh left -55vw, top 65vh right -45vw;
   background-repeat: no-repeat;
-/* 	background-size: cover; */
+	background-size: cover;
 }
 
 .container {
@@ -54,16 +59,17 @@ body {
 .card-profile h2 span,
 .card-profile p,
 .card-profile span {
-	color: #aaa;
+	color: var(--gray);
 }
 
 
 .card-profile h2 {
 	font-weight: bold;
+	font-size: 1.2em;
 }
 
 .card-profile p {
-	border-bottom: 1px solid #ccc;
+	border-bottom: 1px solid var(--gray-light);
 	padding-bottom: 1.5em;
 }
 
@@ -79,8 +85,13 @@ body {
 .card-status {
 	display: flex;
 	justify-content: center;
-	padding-bottom: 0 1em 1em;
+	padding: 0 1em 1em;
 	text-align: center;
+}
+
+.card-status span {
+	font-size: .9em;
+	letter-spacing: .1em;
 }
 
 .card-status-item {
@@ -97,7 +108,8 @@ body {
 
 @media screen and (min-width:1024px) {
 	body {
-		/* background-position: top -450px left -320px, bottom -1350px right -150px; */
+		background-position: top -70vh left -50vh, top 50vh right -15vw;
+		background-size: initial;
 	}
 
 	.wrapper {
